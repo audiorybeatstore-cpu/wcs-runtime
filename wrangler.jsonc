@@ -7,10 +7,12 @@
   "containers": [
     {
       "class_name": "RuntimeContainer",
-      "image": "./Dockerfile",
-      "max_instances": 100,
-      "instance_type": "standard-1",
-      "scheduling_policy": "durable_object"
+      "scheduling_policy": "durable_object",
+      "images": {
+        "runtime": {
+          "dockerfile": "./Dockerfile"
+        }
+      }
     }
   ],
   "durable_objects": {
