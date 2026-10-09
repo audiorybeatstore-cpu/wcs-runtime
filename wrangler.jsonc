@@ -21,7 +21,7 @@
     ]
   },
   "r2_buckets": [
-    { "binding": "SOURCE_BUCKET", "bucket_name": "webcode-studio" }
+    { "binding": "SOURCE_BUCKET", "bucket_name": "webcode-studio-storage" }
   ],
   "migrations": [
     { "tag": "v1", "new_sqlite_classes": ["RuntimeContainer"] }
