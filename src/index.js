@@ -117,7 +117,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname === "/health") return json({ ok: true, service: "wcs-runtime", version: "1.0.0" });
     try {
-      const identity = assertInternalHeaders(request.headers);
+      const identity = assertInternalHeaders(request.headers, env);
       const deploymentId = identity.deployment;
       const stub = env.RUNTIME_CONTAINER.get(env.RUNTIME_CONTAINER.idFromName(deploymentId));
 
